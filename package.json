@@ -1,0 +1,74 @@
+{
+  "name": "lua-templates",
+  "displayName": "Lua Templates",
+  "description": "Language support for Lua Templates (Penlight, etlua, etc)",
+  "version": "0.0.1",
+  "publisher": "commita",
+  "license": "MIT",
+  "homepage": "https://github.com/commita/vscode-lua-templates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commita/vscode-lua-templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/commita/vscode-lua-templates/issues"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#030380",
+    "theme": "dark"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "lua",
+    "template",
+    "etlua",
+    "plt"
+  ],
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "html.plt",
+        "aliases": ["html.plt"],
+        "extensions": [".plt", ".html.plt"],
+        "configuration": "./language-configuration-plt.json"
+      },
+      {
+        "id": "html.etlua",
+        "aliases": ["html.etlua"],
+        "extensions": [".etlua", ".html.etlua"],
+        "configuration": "./language-configuration-etlua.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "html.plt",
+        "scopeName": "text.html.plt",
+        "path": "./syntaxes/html.plt.tmLanguage",
+        "embeddedLanguages": {
+          "source.css": "css",
+          "source.html": "html",
+          "source.js": "javascript",
+          "source.lua": "lua"
+        }
+      },
+      {
+        "language": "html.etlua",
+        "scopeName": "text.html.etlua",
+        "path": "./syntaxes/html.etlua.tmLanguage",
+        "embeddedLanguages": {
+          "source.css": "css",
+          "source.html": "html",
+          "source.js": "javascript",
+          "source.lua": "lua"
+        }
+      }
+    ]
+  }
+}
